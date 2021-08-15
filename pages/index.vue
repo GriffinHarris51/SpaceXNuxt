@@ -16,7 +16,11 @@
           v-if="launch.links.patch.small"
           v-bind:key="index"
         >
-          <NuxtLink :to="`/${launch.name}/${launch.id}`">
+          <NuxtLink
+            :to="`/${launch.name.split('/').join('-').replace(/ /g, '')}/${
+              launch.id
+            }`"
+          >
             <div class="flex justify-center">
               <img
                 class="w-32 h-32 mt-4"
