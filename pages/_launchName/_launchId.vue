@@ -4,7 +4,7 @@
     <iframe
       width="100%"
       height="500"
-      :src="`http://www.youtube.com/embed/${launch.links.youtube_id}`"
+      :src="`https://www.youtube.com/embed/${launch.links.youtube_id}`"
       frameborder="0"
       allowfullscreen
     ></iframe>

@@ -16,6 +16,7 @@
           v-if="launch.links.patch.small"
           v-bind:key="index"
         >
+          <!-- note: has to prettify urls and remove slashes in name to prevent errors on netlify build -->
           <NuxtLink
             :to="`/${launch.name.split('/').join('-').replace(/ /g, '')}/${
               launch.id
