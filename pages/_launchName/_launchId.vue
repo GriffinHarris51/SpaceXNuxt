@@ -21,6 +21,19 @@ export default {
     )
     return { params, launch }
   },
+  head() {
+    return {
+      title: this.launch.name,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.launch.details ? this.launch.details : 'No details',
+        },
+      ],
+    }
+  },
 }
 </script>
 <style lang="scss" scoped></style>
